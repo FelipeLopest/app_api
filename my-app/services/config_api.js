@@ -1,4 +1,4 @@
-export const url_api = ()=>{
+export const apiBrasil = () => {
     return 'https://brasilapi.com.br/api';
 }
 

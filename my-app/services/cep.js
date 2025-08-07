@@ -1,24 +1,26 @@
-import * as config from './config_api.js';
+import * as config from './config_api.js'
 
-export const getDDD = async (ddd) => {
-    const url = `${config.apiBrasil()}/ddd/v1/${ddd}`;
+export const getCep = async (cep) => {
+    const url = `${config.apiBrasil()}/cep/v2/${cep}`;
     const options = {
         method: 'GET',
         headers: {
             accept: 'application/json'
         }
     };
+
     try {
         const response = await fetch(url, options);
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
-            return;
+            return
         }
-
         return await response.json();
+
     } catch (error) {
-        console.error('Error fetching DDD data:', error);
+        console.error('error fetching cep number:', error);
         throw error;
+
     }
 }
 
