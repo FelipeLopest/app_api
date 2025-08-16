@@ -22,5 +22,10 @@ export const getCep = async (cep) => {
         throw error;
 
     }
+
+   
 }
+
+
+
 

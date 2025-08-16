@@ -1,6 +1,6 @@
 import { StyleSheet, View, Text, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import React from 'react';
+
 
 
 
@@ -10,6 +10,9 @@ import React from 'react';
 export default function Home() {
 
     const Navigation = useNavigation();
+    
+    
+ 
 
     return (
 

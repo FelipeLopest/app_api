@@ -2,7 +2,7 @@
 
 import * as config from './config_api.js'
 
-export const cnpj = async (cnpj) => {
+export const getCnpj = async (cnpj) => {
     const url = `${config.apiBrasil()}/cnpj/v1/${cnpj}`
     const options = {
         method: 'GET',
@@ -14,7 +14,6 @@ export const cnpj = async (cnpj) => {
 
     try {
         const response = await fetch(url, options);
-
         if (!response.ok) {
             throw new Error(`http error! status: ${response.status}`)
             return
@@ -27,4 +26,5 @@ export const cnpj = async (cnpj) => {
 
     }
 }
+
 

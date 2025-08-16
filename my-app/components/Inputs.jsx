@@ -22,7 +22,7 @@ export const InputCep = ({ onChangeText }) => {
         maxLength={8}
         placeholder='Digite seu cep'
         keyboardType='numeric'
-        onChange={onChangeText}
+        onChangeText={onChangeText}
 
       />
 
@@ -36,13 +36,43 @@ export const InputCNPJ = ({ onChangeText }) => {
     <View style={styles.container}>
       <TextInput
         style={styles.input}
-        maxLength={2}
+        maxLength={14}
         placeholder="Digite o CNPJ"
         keyboardType="numeric"
         onChangeText={onChangeText}
       />
     </View>
   );
+
+}
+export const InputFeriado = ({onChangeText}) => {
+  return(
+    <View style={styles.container}>
+      <TextInput
+       style={styles.input}
+        maxLength={4}
+        placeholder="Digite o Ano"
+        keyboardType="numeric"
+        onChangeText={onChangeText}
+      
+      
+      />
+    </View >
+
+
+  );
+
+  
+}
+export const InputFipe = ({onChangeText}) =>{
+  return(
+    <View style={styles.container}>
+     <TextInput
+     placeholder='digite o tipo do veiculo ex: carros '
+     keyboardType='default'
+     onChangeText={onChangeText}/>
+    </View>
+  )
 }
 
 const styles = StyleSheet.create({
