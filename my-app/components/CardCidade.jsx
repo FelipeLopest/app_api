@@ -3,8 +3,8 @@ import { StyleSheet, View, Text } from 'react-native';
 const CardCidade = ({ nome, uf }) => {
   return (
     <View style={styles.card}>
-      <Text style={styles.texto}>Cidade: {nome}</Text>
-      <Text style={styles.texto}>UF: {uf}</Text>
+      <Text style={styles.titulo}>Cidade: {nome}</Text>
+      <Text style={styles.subtitulo}>UF: {uf}</Text>
     </View>
   );
 }
@@ -13,24 +13,28 @@ export default CardCidade;
 
 const styles = StyleSheet.create({
   card: {
-    width: '100%',
-    backgroundColor: '#f8f8f8',
-    padding: 10,
-    margin: 10,
-    borderRadius: 5,
+    width: '90%',
+     backgroundColor: "#1E1E1E",
+    padding: 20,
+    marginVertical: 10,
+    marginHorizontal: '5%',
+    borderRadius: 12,
     shadowColor: '#000',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-    elevation: 5,
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.1,
+    shadowRadius: 6,
+    elevation: 4,
+    borderWidth: 1,
+    borderColor: '#474747ff',
   },
-  texto: {
+  titulo: {
+    fontSize: 20,
+    fontWeight: '600',
+    color: '#0981f1ff',
+    marginBottom: 4,
+  },
+  subtitulo: {
     fontSize: 16,
-    color: '#333',
+    color: '#FFF',
   },
 });

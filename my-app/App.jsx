@@ -19,7 +19,19 @@ const MenuNav = createDrawerNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <MenuNav.Navigator>
+      <MenuNav.Navigator  screenOptions={{
+          headerStyle: { backgroundColor: '#121212' }, // header dark
+          headerTintColor: '#fff', // cor do texto do header
+          drawerStyle: {
+            backgroundColor: '#1E1E1E', // fundo do menu lateral
+          },
+          drawerActiveTintColor: '#0981f1ff', // cor do item selecionado (laranja)
+          drawerInactiveTintColor: '#ccc', // cor dos itens não selecionados
+          drawerLabelStyle: {
+            fontSize: 15,
+            fontWeight: '600',
+          },
+        }}>
         <MenuNav.Screen name="Inicio" component={Home} />
         <MenuNav.Screen name="DDD" component={Tela_ddd} />
         <MenuNav.Screen name="CNPJ" component={Tela_cnpj} />
